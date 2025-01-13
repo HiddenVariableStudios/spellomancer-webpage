@@ -1,0 +1,85 @@
+h1 {
+    text-align:center;
+}
+body {
+    margin:0;
+}
+iframe {
+    width:100%;
+    height:100%;
+}
+.content-wrapper {
+    position: relative;
+    max-width: 100%;
+    margin-left:auto;
+    margin-right:auto;
+}
+#hero-image {
+    background-image: url("resources/HeaderBackground.png");
+    height:calc(3443vw/4096 * 200); /*img height / width * 200*/
+    background-position:center top;
+    background-repeat:no-repeat;
+    background-size:cover;
+    position:relative;
+}
+#background-image {
+    background-image: url("resources/WallBackground.png");
+    height:calc(10329vw/4096 * 200);
+    background-position:center top;
+    background-repeat:no-repeat;
+    background-size:cover;
+    position:relative;
+}
+#logo {
+    width:90%;
+    margin-left:5%;
+    margin-right:5%;
+    margin-top:17%;
+}
+#steam-button {
+    width:70%;
+    margin-left:15%;
+    margin-right:15%;
+    margin-top:15%;
+}
+#video-wrapper {
+    padding-top: 2vh;
+    width:100%;
+    height:100%;
+}
+#video-frame {
+    max-width:100%;
+    width:auto;
+    height:auto;
+}
+#video-player {
+    position:absolute;
+    top:14.1%;
+    left:8%;
+    width:84.4%;
+    height:73.2%;
+
+}
+#description-wrapper {
+    width:90%;
+    padding:20px;
+    border-image-source: url("resources/BannerBackground.png");
+    border-image-slice: 162 259 74 241 fill;
+    border-image-width: auto;
+    border-image-repeat: stretch;
+}
+@media only screen and (min-width:960px)
+{
+    .content-wrapper {
+        max-width:960px;
+    }
+    #hero-image {
+        height: calc(3443px/4096*1920); /*img height / width * 1920*/
+    }
+    #background-image{
+        height:calc(10329px/4096 * 1920);
+    }
+}
+@media only screen and (min-aspect-ratio:16/9) {
+
+}
