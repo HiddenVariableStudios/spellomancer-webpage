@@ -5,8 +5,11 @@ body {
     margin:0;
 }
 iframe {
+    position:absolute;
+    top:0;
+    left:0;
     width:100%;
-    height:100%;
+    height:100%;    
 }
 .content-wrapper {
     position: relative;
@@ -51,14 +54,22 @@ iframe {
     max-width:100%;
     width:auto;
     height:auto;
+    border-image-source: url("resources/VideoFrame.png");
+    border-image-slice: 162 259 74 241 fill;
+    border-image-width: auto;
+    border-image-repeat: stretch;
 }
 #video-player {
-    position:absolute;
-    top:14.1%;
-    left:8%;
-    width:84.4%;
-    height:73.2%;
-
+    width:80%;
+    height:80%;
+    margin-left:10%;
+    margin-top:10%;
+}
+#video-padding {
+    position: relative;
+    width:100%;
+    padding-top:56.25%;
+    overflow:hidden;
 }
 #description-wrapper {
     width:90%;
