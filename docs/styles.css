@@ -13,6 +13,10 @@ h1 {
     color:antiquewhite;
     font-size: 3rem;
 }
+h2 {
+    text-align:center;
+    color:antiquewhite;
+}
 p {
     color:antiquewhite;
     font-size: 1.5rem;
@@ -124,6 +128,47 @@ p {
 #description {
     padding: 60px 12% 40px 12%;
 }
+#image-frame {
+    position: relative;
+    width: 100%;
+    padding-top:68%;
+    overflow: hidden;
+    border-image-source: url("resources/VideoFrame.png");
+    border-image-slice: 187 151 211 156 fill;
+    border-image-width: 14.46% 7.8% 16.32% 8.15%;
+    border-image-repeat: stretch;
+}
+#image-carousel {
+    position:absolute;
+    top:14.4%;
+    left:8.1%;
+    width:84.1%;
+}
+#display-image {
+    width:100%;
+}
+#triangle-banner {
+    position:relative;
+    width:60%;
+    margin-left: 35%;
+    margin-top:5%;
+}
+#rectangle-banner {
+    position:relative;
+    width:50%;
+    margin-left:5%;
+}
+#triangle-banner h2 {
+    position:absolute;
+    top:39%;
+    left:14%;
+}
+#rectangle-banner h2 {
+    position:absolute;
+    top:35%;
+    left:15%;
+    width:70%;
+}
 #footer-image {
     background-image: url("resources/FooterBackground.png");
     height:calc(3443vw/4096 * 200);
@@ -131,6 +176,17 @@ p {
     background-repeat:no-repeat;
     background-size:cover;
     position:relative;
+}
+@media only screen and (max-width:760px) {
+    h1 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1.35rem;
+    }
+    #description-wrapper {
+        border-image-width: 10% 10% 12% 10%
+    }
 }
 @media only screen and (min-width:960px)
 {
