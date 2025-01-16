@@ -169,6 +169,7 @@ p {
     height:69.6%;
 }
 #back-button, #forward-button {
+    cursor:pointer;
     position:absolute;
     height:10%;
     width:5.625%;
@@ -201,14 +202,17 @@ p {
 }
 #triangle-banner h2 {
     position:absolute;
-    top:39%;
-    left:14%;
+    top:30%;
+    left:10%;
+    right:20%;
+    font-size:4vw;
 }
 #rectangle-banner h2 {
     position:absolute;
-    top:35%;
+    top:25%;
     left:15%;
     width:70%;
+    font-size: 4vw;
 }
 #footer-image {
     background-image: url("resources/FooterBackground.png");
@@ -228,6 +232,12 @@ p {
     #description-wrapper {
         border-image-width: 10% 10% 12% 10%
     }
+    #rectangle-banner h2 {
+        font-size: 3.75vw;
+    }
+    #triangle-banner h2 {
+        font-size: 3.75vw;
+    }
 }
 @media only screen and (min-width:960px)
 {
@@ -243,6 +253,12 @@ p {
     #footer-image {
         height: calc(3443px/4096*1920);
     }
+    #rectangle-banner h2 {
+        font-size: 38px;
+    }
+    #triangle-banner h2 {
+        font-size: 38px;
+    }
 }
 @media only screen and (min-width: 1921px) {
     .content-wrapper {
@@ -257,5 +273,10 @@ p {
     #footer-image {
         height:calc(3443vw/4096 * 100);
     }
-
+    #rectangle-banner h2 {
+        font-size: 2vw;
+    }
+    #triangle-banner h2 {
+        font-size: 2vw;
+    }
 }
