@@ -19,10 +19,10 @@ iframe {
 }
 h1 {
     font-family:"ARCO";
-    letter-spacing:0.3rem;
     text-align:center;
     color:antiquewhite;
-    font-size: 3rem;
+    font-size: 1.75rem;
+    letter-spacing:0.175rem;
 }
 h2 {
     letter-spacing:0.1rem;
@@ -31,7 +31,7 @@ h2 {
 }
 p {
     color:antiquewhite;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 .content-wrapper {
     position: relative;
@@ -145,7 +145,7 @@ p {
     margin-top:10%;
     border-image-source: url("resources/BannerBackground.png");
     border-image-slice: 165 259 150 241 fill;
-    border-image-width: 12% 10%;
+    border-image-width: 10% 10% 12% 10%;
     border-image-repeat: stretch;
 }
 #description {
@@ -205,14 +205,14 @@ p {
     top:30%;
     left:10%;
     right:20%;
-    font-size:4vw;
+    font-size: 3.75vw;
 }
 #rectangle-banner h2 {
     position:absolute;
     top:25%;
     left:15%;
     width:70%;
-    font-size: 4vw;
+    font-size: 3.75vw;
 }
 #footer-image {
     background-image: url("resources/FooterBackground.png");
@@ -222,25 +222,35 @@ p {
     background-size:cover;
     position:relative;
 }
-@media only screen and (max-width:760px) {
+
+@media only screen and (min-width:760px) {
     h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
+        letter-spacing:0.25rem;
     }
     p {
-        font-size: 1.35rem;
+        font-size: 1.5rem;
     }
     #description-wrapper {
-        border-image-width: 10% 10% 12% 10%
+        border-image-width: 12% 10%;
+
     }
     #rectangle-banner h2 {
-        font-size: 3.75vw;
+        font-size: 4vw;
     }
     #triangle-banner h2 {
-        font-size: 3.75vw;
+        font-size: 4vw;
     }
 }
 @media only screen and (min-width:960px)
 {
+    h1 {
+        font-size: 3rem;
+        letter-spacing: .3rem;
+    }
+    p {
+        font-size: 1.75rem;
+    }
     .content-wrapper {
         max-width:960px;
     }
@@ -261,6 +271,12 @@ p {
     }
 }
 @media only screen and (min-width: 1921px) {
+    h1 {
+        font-size: 2.5vw;
+    }
+    p {
+        font-size: 1.25vw;
+    }
     .content-wrapper {
         max-width:50vw;
     }
