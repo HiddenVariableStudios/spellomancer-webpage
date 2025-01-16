@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script src="scripts.js"></script> 
 </head>
 <body>
     <main>
@@ -35,11 +39,11 @@
                     <a href="https://www.tiktok.com/@spellomancer" >
                         <img src="resources/buttons/tiktok.png" class="round-button">
                     </a>
-                    <a href="https://hiddenvariable.com" >
-                        <img src="resources/buttons/hvs.png" class="round-button">
-                    </a>
                     <a href="https://www.twitch.tv/hiddenvariablestudios" >
                         <img src="resources/buttons/twitch.png" class="round-button">
+                    </a>
+                    <a href="https://hiddenvariable.com" >
+                        <img src="resources/buttons/hvs.png" class="round-button">
                     </a>
                 </div>
                 <div id="video-wrapper">
@@ -61,7 +65,18 @@
                 <img src="resources/CentralDivider.png" class="central-divider">
                 <div id="image-frame">
                     <div id="image-carousel">
-                        <img src="resources/Carousel/CarouselImage1.jpg" id="display-image">
+                        <img src="resources/Carousel/CarouselImage1.jpg" class="carousel-image active">
+                        <img src="resources/Carousel/CarouselImage2.jpg" class="carousel-image">
+                        <img src="resources/Carousel/CarouselImage3.jpg" class="carousel-image">
+                        <img src="resources/Carousel/CarouselImage4.jpg" class="carousel-image">
+                        <img src="resources/Carousel/CarouselImage5.jpg" class="carousel-image">
+
+                        <a onclick="plusCarousel(-1)" id="back-button">
+                            <img src="resources/CarouselArrowBack.png">
+                        </a>
+                        <a onclick="plusCarousel(1)" id="forward-button">
+                            <img src="resources/CarouselArrowForward.png">
+                        </a>
                     </div>
                 </div>
                 <div id="triangle-banner">
