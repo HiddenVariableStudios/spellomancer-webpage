@@ -68,7 +68,7 @@ p {
 }
 .carousel-image {
     opacity:0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
     width:100%;
     position:absolute;
     top:0;
@@ -166,7 +166,7 @@ p {
     top:14.4%;
     left:8.1%;
     width:84.1%;
-    padding-top:56.25%;
+    height:69.6%;
 }
 #back-button, #forward-button {
     position:absolute;
