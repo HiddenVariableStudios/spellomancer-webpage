@@ -31,7 +31,7 @@ h2 {
 }
 p {
     color:antiquewhite;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 .content-wrapper {
     position: relative;
@@ -60,7 +60,7 @@ p {
 .hover-container .hover {
     display:none;
 }
-.hover-containe:hover .unhover {
+.hover-container:hover .unhover {
     display:none;
 }
 .hover-container:hover .hover {
@@ -71,15 +71,48 @@ p {
     transition: opacity 0.5s ease-in-out;
     width:100%;
     position:absolute;
+    cursor: pointer;
     top:0;
     left:0;
 }
-.active {
+.dot {
+    cursor: pointer;
+    width: 75%;
+    margin: auto 15%;
+    display: block;
+    justify-content:center;
+  }
+.dot img {
+    width:100%;
+    height: auto;
+}
+  
+.active-dot .hover {
+    display:block;
+}
+.active-dot .unhover {
+    display:none;
+}
+ .modal-image {
+    position:absolute;
+    max-width:80vw;
+    max-height:90vh;
+    height:auto;
+    width:auto;
+    margin:auto;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    opacity:0;
+    transition: opacity 0.5s ease-in-out;
+}
+.active-image {
     opacity:1;
 }
 #hero-image {
     background-image: url("resources/HeaderBackground.png");
-    height:calc(3443vw/4096 * 200); /*img height / width * 200*/
+    height:calc(3089vw/4096 * 200); /*img height / width * 200*/
     background-position:center top;
     background-repeat:no-repeat;
     background-size:cover;
@@ -94,16 +127,16 @@ p {
     position:relative;
 }
 #logo {
-    width:80%;
-    margin-left:10%;
-    margin-right:10%;
-    margin-top:21%;
+    width:70%;
+    margin-left:15%;
+    margin-right:15%;
+    margin-top:7%;
 }
 #steam-button-book {
     width:70%;
     margin-left:15%;
     margin-right:15%;
-    margin-top:13.4%;
+    margin-top:13.5%;
     position:relative;
 }
 #steam-book {
@@ -156,9 +189,9 @@ p {
     width: 100%;
     padding-top:68%;
     overflow: hidden;
-    border-image-source: url("resources/VideoFrame.png");
-    border-image-slice: 187 151 211 156 fill;
-    border-image-width: 14.46% 7.8% 16.32% 8.15%;
+    border-image-source: url("resources/GalleryFrame.png");
+    border-image-slice: 224 151 211 156 fill;
+    border-image-width: 14.2% 7.8% 16.32% 8.15%;
     border-image-repeat: stretch;
 }
 #image-carousel {
@@ -168,48 +201,49 @@ p {
     width:84.1%;
     height:69.6%;
 }
-#back-button, #forward-button {
+#carousel-dots {
+    width:40%;
+    margin-left: 30%;
+    display:grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 2fr;
+    justify-content:center;
+    align-items:center;
+}
+#carousel-back-button, #carousel-forward-button {
+    margin-left:10%;
     cursor:pointer;
-    position:absolute;
-    height:10%;
-    width:5.625%;
-    top:45%;
+    width:80%;
+    height:auto;
 }
-#back-button img {
+#carousel-back-button img, #carousel-forward-button img {
     width:100%;
-    height:100%;
+    height:auto;
 }
-#forward-button img {
-    width:100%;
-    height:100%;
+#carousel-forward-button img {
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
 }
-#back-button {
-    left:1%;
-}
-#forward-button {
-    right:1%;
-}
-#triangle-banner {
+#orange-banner {
     position:relative;
-    width:60%;
+    width:50%;
     margin-left: 35%;
     margin-top:5%;
 }
-#rectangle-banner {
+#blue-banner {
     position:relative;
     width:50%;
     margin-left:5%;
 }
-#triangle-banner h2 {
+#orange-banner h2 {
     position:absolute;
-    top:30%;
-    left:10%;
-    right:20%;
+    top:20%;
+    left:15%;
+    right:15%;
     font-size: 3.75vw;
 }
-#rectangle-banner h2 {
+#blue-banner h2 {
     position:absolute;
-    top:25%;
+    top:17.5%;
     left:15%;
     width:70%;
     font-size: 3.75vw;
@@ -223,6 +257,47 @@ p {
     position:relative;
 }
 
+#modal {
+    position:fixed;
+    width:100vw;
+    height:100vh;
+    top:0;
+    bottom:0;
+    display:none;
+}
+#modal-background {
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+    background-color:rgba(0, 0, 0, 0.75);
+}
+
+#modal-back-button, #modal-forward-button {
+    position:absolute;
+    width:5%;
+    height:auto;
+    cursor:pointer;
+    top:50%;
+    transform: translate(0, -50%);
+}
+#modal-back-button {
+    left: 2.5%;
+}
+#modal-forward-button {
+    right: 2.5%;
+}
+#modal-back-button img, #modal-forward-button img {
+    width:100%;
+    height:auto;
+}
+#modal-forward-button img {
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+}
 @media only screen and (min-width:760px) {
     h1 {
         font-size: 2.5rem;
@@ -235,10 +310,7 @@ p {
         border-image-width: 12% 10%;
 
     }
-    #rectangle-banner h2 {
-        font-size: 4vw;
-    }
-    #triangle-banner h2 {
+    #orange-banner h2, #blue-banner h2 {
         font-size: 4vw;
     }
 }
@@ -255,33 +327,34 @@ p {
         max-width:960px;
     }
     #hero-image {
-        height: calc(3443px/4096*1920); /*img height / width * 1920*/
+        height: calc(3089px/4096*1920); /*img height / width * 1920*/
     }
     #background-image{
         height:calc(10329px/4096 * 1920);
     }
+    #carousel-dots {
+        width:30%;
+        margin-left: 35%;
+    }
     #footer-image {
         height: calc(3443px/4096*1920);
     }
-    #rectangle-banner h2 {
-        font-size: 38px;
-    }
-    #triangle-banner h2 {
+    #orange-banner h2, #blue-banner h2 {
         font-size: 38px;
     }
 }
 @media only screen and (min-width: 1921px) {
     h1 {
-        font-size: 2.5vw;
+        font-size: 2.5vw
     }
     p {
-        font-size: 1.25vw;
+        font-size: 1.45vw;
     }
     .content-wrapper {
         max-width:50vw;
     }
     #hero-image {
-        height:calc(3443vw/4096 * 100);
+        height:calc(3089vw/4096 * 100);
     }
     #background-image {
         height:calc(10329vw/4096 * 100);
@@ -289,10 +362,16 @@ p {
     #footer-image {
         height:calc(3443vw/4096 * 100);
     }
-    #rectangle-banner h2 {
+    #orange-banner h2, #blue-banner h2 {
         font-size: 2vw;
     }
-    #triangle-banner h2 {
-        font-size: 2vw;
-    }
+}
+@media only screen and (min-aspect-ratio: 2) {
+#modal-back-button {
+    left: calc(((100vw - 160vh) / 2 - 5%) / 2);
+}   
+#modal-forward-button {
+    right: calc(((100vw - 160vh) / 2 - 5%) / 2);
+
+}
 }
