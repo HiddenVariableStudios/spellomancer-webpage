@@ -21,8 +21,8 @@ h1 {
     font-family:"ARCO";
     text-align:center;
     color:antiquewhite;
-    font-size: 1.75rem;
-    letter-spacing:0.175rem;
+    font-size: 2rem;
+    letter-spacing:0.2rem;
 }
 h2 {
     letter-spacing:0.1rem;
@@ -31,7 +31,7 @@ h2 {
 }
 p {
     color:antiquewhite;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
 }
 .content-wrapper {
     position: relative;
@@ -120,7 +120,7 @@ p {
 }
 #background-image {
     background-image: url("resources/WallBackground.png");
-    height:calc(10329vw/4096 * 200);
+    height:calc(6976vw/4096 * 200);
     background-position:center top;
     background-repeat:no-repeat;
     background-size:cover;
@@ -172,13 +172,22 @@ p {
     padding-top:56.25%;
     overflow:hidden;
 }
+#press-kit {
+    width:60%;
+    margin-left:20%;
+    height:auto;
+}
+#press-kit img {
+    width:100%;
+    height:auto;
+}
 #description-wrapper {
     width:90%;
     margin-left:5%;
-    margin-top:10%;
+    margin-top:7.5%;
     border-image-source: url("resources/BannerBackground.png");
     border-image-slice: 165 259 150 241 fill;
-    border-image-width: 10% 10% 12% 10%;
+    border-image-width: 6% 10% 12% 10%;
     border-image-repeat: stretch;
 }
 #description {
@@ -250,13 +259,23 @@ p {
 }
 #footer-image {
     background-image: url("resources/FooterBackground.png");
-    height:calc(3443vw/4096 * 200);
+    height:calc(5027vw/4096 * 200);
     background-position:center top;
     background-repeat:no-repeat;
     background-size:cover;
     position:relative;
 }
-
+#legal {
+    position:absolute;
+    bottom:10px; 
+    width:100%;
+}
+#legal p {
+    margin-top: 0;
+    margin-bottom:0.5rem;
+    text-align:center;
+    font-size:1.25rem;
+}
 #modal {
     position:fixed;
     width:100vw;
@@ -298,16 +317,25 @@ p {
     transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
 }
-@media only screen and (min-width:760px) {
+@media only screen and (min-width:600px) {
     h1 {
-        font-size: 2.5rem;
-        letter-spacing:0.25rem;
-    }
-    p {
-        font-size: 1.5rem;
+    font-size: 2.5rem;
+    letter-spacing:0.25rem;
     }
     #description-wrapper {
-        border-image-width: 12% 10%;
+        border-image-width: 8% 10%;
+    }
+}
+@media only screen and (min-width:768px) {
+    h1 {
+        font-size: 3rem;
+        letter-spacing:0.2rem;
+    }
+    p {
+        font-size: 1.75rem;
+    }
+    #description-wrapper {
+        border-image-width: 10% 10%;
 
     }
     #orange-banner h2, #blue-banner h2 {
@@ -330,14 +358,14 @@ p {
         height: calc(3089px/4096*1920); /*img height / width * 1920*/
     }
     #background-image{
-        height:calc(10329px/4096 * 1920);
+        height:calc(6976px/4096 * 1920);
     }
     #carousel-dots {
         width:30%;
         margin-left: 35%;
     }
     #footer-image {
-        height: calc(3443px/4096*1920);
+        height: calc(5027px/4096*1920);
     }
     #orange-banner h2, #blue-banner h2 {
         font-size: 38px;
@@ -357,10 +385,10 @@ p {
         height:calc(3089vw/4096 * 100);
     }
     #background-image {
-        height:calc(10329vw/4096 * 100);
+        height:calc(6976vw/4096 * 100);
     }
     #footer-image {
-        height:calc(3443vw/4096 * 100);
+        height:calc(5027vw/4096 * 100);
     }
     #orange-banner h2, #blue-banner h2 {
         font-size: 2vw;
