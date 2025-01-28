@@ -59,6 +59,13 @@ p {
     width:48.41%;
     height:40.66%;
 }
+.press-kit-button {
+    position:absolute;
+    top:34.62%;
+    left: 20%;
+    width: 39.39%;
+    height:27.06%;
+}
 .hover-container .unhover {
     display:block;
 }
@@ -178,11 +185,13 @@ p {
     overflow:hidden;
 }
 #press-kit {
+    position:relative;
     width:60%;
     margin-left:20%;
     height:auto;
+    position:relative;
 }
-#press-kit img {
+#press-kit-book {
     width:100%;
     height:auto;
 }
