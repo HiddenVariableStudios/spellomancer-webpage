@@ -4,6 +4,11 @@
     font-weight: normal;
     font-style: normal;
 }
+:root {
+    --header-height: 3089/4096;
+    --background-height: 7980/4096;
+    --footer-height: 5027/4096;
+}
 body {
     margin:0;
     font-family: 'Lilita One';
@@ -31,7 +36,7 @@ h2 {
 }
 p {
     color:antiquewhite;
-    font-size: 1.75rem;
+    font-size: 1.25rem;
 }
 .content-wrapper {
     position: relative;
@@ -112,7 +117,7 @@ p {
 }
 #hero-image {
     background-image: url("resources/HeaderBackground.png");
-    height:calc(3089vw/4096 * 200); /*img height / width * 200*/
+    height:calc(200vw * var(--header-height)); /*img height / width * 200*/
     background-position:center top;
     background-repeat:no-repeat;
     background-size:cover;
@@ -120,7 +125,7 @@ p {
 }
 #background-image {
     background-image: url("resources/WallBackground.png");
-    height:calc(6976vw/4096 * 200);
+    height:calc(200vw * var(--background-height));
     background-position:center top;
     background-repeat:no-repeat;
     background-size:cover;
@@ -136,7 +141,7 @@ p {
     width:70%;
     margin-left:15%;
     margin-right:15%;
-    margin-top:15%;
+    margin-top:13%;
     position:relative;
 }
 #steam-book {
@@ -259,7 +264,7 @@ p {
 }
 #footer-image {
     background-image: url("resources/FooterBackground.png");
-    height:calc(5027vw/4096 * 200);
+    height:calc(200vw * var(--footer-height));
     background-position:center top;
     background-repeat:no-repeat;
     background-size:cover;
@@ -322,6 +327,9 @@ p {
     font-size: 2.5rem;
     letter-spacing:0.25rem;
     }
+    p {
+        font-size:1.5rem;
+    }
     #description-wrapper {
         border-image-width: 8% 10%;
     }
@@ -355,17 +363,17 @@ p {
         max-width:960px;
     }
     #hero-image {
-        height: calc(3089px/4096*1920); /*img height / width * 1920*/
+        height: calc(1920px * var(--header-height)); /*img height / width * 1920*/
     }
     #background-image{
-        height:calc(6976px/4096 * 1920);
+        height:calc(1920px * var(--background-height));
     }
     #carousel-dots {
         width:30%;
         margin-left: 35%;
     }
     #footer-image {
-        height: calc(5027px/4096*1920);
+        height: calc(1920px * var(--footer-height));
     }
     #orange-banner h2, #blue-banner h2 {
         font-size: 38px;
@@ -382,13 +390,13 @@ p {
         max-width:50vw;
     }
     #hero-image {
-        height:calc(3089vw/4096 * 100);
+        height:calc(100vw * var(--header-height));
     }
     #background-image {
-        height:calc(6976vw/4096 * 100);
+        height:calc(100vw * var(--background-height));
     }
     #footer-image {
-        height:calc(5027vw/4096 * 100);
+        height:calc(100vw * var(--footer-height));
     }
     #orange-banner h2, #blue-banner h2 {
         font-size: 2vw;
