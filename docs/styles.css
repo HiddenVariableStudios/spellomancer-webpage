@@ -332,12 +332,6 @@ p {
     transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
 }
-#hover-test {
-    display:none;
-}
-#pointer-test {
-    display:none;
-}
 @media only screen and (min-width:460px) {
     h1 
     {
@@ -432,7 +426,7 @@ p {
         font-size: 2vw;
     }
 }
-@media only screen and (min-aspect-ratio:1.1) {
+@media only screen and (min-aspect-ratio:1.1) and (pointer:coarse) {
     .content-wrapper {
         max-width:50vw;
     }
@@ -459,16 +453,6 @@ p {
     }
     #orange-banner h2, #blue-banner h2 {
         font-size: 2vw;
-    }
-}
-@media only screen and (hover: none) {
-    #hover-test {
-        display: block;
-    }
-}
-@media only screen and (pointer: coarse) {
-    #pointer-test {
-        display: block;
     }
 }
 @media only screen and (min-aspect-ratio: 2) {
