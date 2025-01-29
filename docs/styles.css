@@ -26,8 +26,8 @@ h1 {
     font-family:"ARCO";
     text-align:center;
     color:antiquewhite;
-    font-size: 2rem;
-    letter-spacing:0.2rem;
+    font-size: 1.5rem;
+    letter-spacing:0.15rem;
 }
 h2 {
     letter-spacing:0.1rem;
@@ -36,7 +36,7 @@ h2 {
 }
 p {
     color:antiquewhite;
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 .content-wrapper {
     position: relative;
@@ -288,7 +288,7 @@ p {
     margin-top: 0;
     margin-bottom:0.5rem;
     text-align:center;
-    font-size:1.25rem;
+    font-size:1rem;
 }
 #modal {
     position:fixed;
@@ -331,6 +331,20 @@ p {
 #modal-forward-button img {
     transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
+}
+@media only screen and (min-width:460px) {
+    h1 
+    {
+        font-size: 2rem;
+        letter-spacing:0.2rem;
+    }
+    p
+    {
+        font-size:1.25rem;
+    }
+    #footer-image p {
+        font-size:1.25rem;
+    }
 }
 @media only screen and (min-width:600px) {
     h1 {
@@ -412,10 +426,39 @@ p {
         font-size: 2vw;
     }
 }
+@media only screen and (orientation:landscape) and (hover:none) and (pointer:coarse) {
+    .content-wrapper {
+        max-width:50vw;
+    }
+    #hero-image {
+        height:calc(100vw * var(--header-height));
+    }
+    #background-image {
+        height:calc(100vw * var(--background-height));
+    }
+    #footer-image {
+        height:calc(100vw * var(--footer-height));
+    }
+    h1 
+    {
+        font-size: 1.5rem;
+        letter-spacing:0.15rem;
+    }
+    p
+    {
+        font-size:1rem;
+    }
+    #footer-image p {
+        font-size:1.25rem;
+    }
+    #orange-banner h2, #blue-banner h2 {
+        font-size: 2vw;
+    }
+}
 @media only screen and (min-aspect-ratio: 2) {
 #modal-back-button {
     left: calc(((100vw - 160vh) / 2 - 5%) / 2);
-}   
+} 
 #modal-forward-button {
     right: calc(((100vw - 160vh) / 2 - 5%) / 2);
 
