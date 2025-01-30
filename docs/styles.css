@@ -6,7 +6,9 @@
 }
 :root {
     --header-height: 3089/4096;
-    --background-height: 7980/4096;
+    --background-height: 6550/4096;
+    --top-spacer-height: 817/4096;
+    --bottom-spacer-height: 613/4096;
     --footer-height: 5027/4096;
 }
 body {
@@ -271,6 +273,23 @@ p {
     width:70%;
     font-size: 3.75vw;
 }
+#top-spacer {
+    background-image: url("resources/TopSpacer.png");
+    height:calc(200vw * var(--top-spacer-height)); /*img height / width * 200*/
+    background-position:center top;
+    background-repeat:no-repeat;
+    background-size:cover;
+    position:relative;
+}
+#bottom-spacer {
+    background-image: url("resources/BottomSpacer.png");
+    height:calc(200vw * var(--bottom-spacer-height)); /*img height / width * 200*/
+    background-position:center top;
+    background-repeat:no-repeat;
+    background-size:cover;
+    position:relative;
+    display:none;
+}
 #footer-image {
     background-image: url("resources/FooterBackground.png");
     height:calc(200vw * var(--footer-height));
@@ -373,6 +392,9 @@ p {
     #orange-banner h2, #blue-banner h2 {
         font-size: 4vw;
     }
+    #top-spacer {
+        display:none;
+    }
 }
 @media only screen and (min-width:960px)
 {
@@ -454,6 +476,14 @@ p {
     #orange-banner h2, #blue-banner h2 {
         font-size: 2vw;
     }
+    #top-spacer {
+        display:block;
+        height:calc(100vw * var(--top-spacer-height));
+    }
+    #bottom-spacer {
+        display:block;
+        height:calc(100vw * var(--bottom-spacer-height));
+    }
 }
 @media only screen and (min-aspect-ratio: 2) {
 #modal-back-button {
@@ -461,6 +491,5 @@ p {
 } 
 #modal-forward-button {
     right: calc(((100vw - 160vh) / 2 - 5%) / 2);
-
 }
 }
